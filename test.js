@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /*
  * Copyright (C) 2021 Kian Cross
+ *               2023 Hiroshi Miura
  */
 
 const fs = require("fs");
