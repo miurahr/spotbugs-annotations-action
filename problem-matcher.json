@@ -1,17 +1,16 @@
 {
   "problemMatcher": [
     {
-      "owner": "checkstyle",
-      "severity": "warning",
+      "owner": "spotbugs",
+      "severity": "error",
       "pattern": [
         {
-          "regexp": "^.*\\[(?:(ERROR)|WARN)\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)\\s+\\[(.*)\\]$",
+          "regexp": "^.*(H|M|L)\\s+((:?D|I|P|U|V)\\s+(:?[A-Z_]+)?(:?[A-Z][a-z]+[0-9]?)):\\s+(.*)\\s+At\\s+([A-Za-z0-9_]+\\.java):\\[line (\\d+)\\]$",
           "severity": 1,
-          "file": 2,
-          "line": 3,
-          "column": 4,
-          "message": 5,
-          "code": 6
+          "file": 4,
+          "line": 5,
+          "message": 3,
+          "code": 2
         }
       ]
     }
