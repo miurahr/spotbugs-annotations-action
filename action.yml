@@ -2,11 +2,11 @@
 # Copyright (C) 2021 Kian Cross
 #
 
-name: Java Checkstyle Annotations Uploader
-author: Kian Cross
+name: Java Spotbugs Annotations Uploader
+author: Hiroshi Miura
 
 description: >
-  Uploads Checkstyle errors & warnings as GitHub Annotations and
+  Uploads SpotBugs errors & warnings as GitHub Annotations and
   decorates the log file output. Compatible with forked PRs.
 
 branding:
