@@ -2,12 +2,24 @@
   "problemMatcher": [
     {
       "owner": "spotbugs",
-      "severity": "error",
       "pattern": [
         {
-          "regexp": "^.*((?:H|M|L)\\s+(?:B|D|I|P|U|V)\\s+(?:[A-Z0-9_]+\\s+)?(?:[A-Za-z0-9]+)):\\s+(.*)\\s+At\\s+([A-Za-z0-9_]+\\.java):\\[line (\\d+)\\]$",
+          "regexp": "^.*((?:H|M|L)\\s+(?:B|C|D|I|P|U|V|X)\\s+(?:[A-Z0-9_]+\\s+)?(?:[A-Za-z0-9]+)):\\s+(.*)\\s+(?:a|A)t\\s+([A-Za-z0-9_]+\\.java):\\[line (\\d+(?:[\\-]\\d+)?)\\]$",
           "file": 3,
           "line": 4,
+          "message": 2,
+          "code": 1
+        },
+        {
+          "regexp": "^.*(M X (?:[A-Z0-9_]+\\s+)?(?:[A-Za-z0-9]+)):\\s+((?:.*)\\s+(?:a|A)t\\s+([A-Za-z0-9_]+\\.java):\\[line (\\d+)\\] is not discharged)$",
+          "file": 3,
+          "line": 4,
+          "message": 2,
+          "code": 1
+        },
+        {
+          "regexp": "^.*((?:L|M)\\s+(?:B|P)\\s+(?:[A-Z0-9_]+\\s+)?(?:[A-Za-z0-9]+)):\\s+(.*)\\s+In\\s+([A-Za-z0-9_]+\\.java)$",
+          "file": 3,
           "message": 2,
           "code": 1
         }
