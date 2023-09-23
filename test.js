@@ -22,14 +22,14 @@ function assertEqual(a, b) {
 const testCases = [
   {
     input: `2023-09-23T04:41:35.2692129Z L B NM_CONFUSING Nm: Confusing to have methods org.omegat.externalfinder.item.ExternalFinderItem.getKeystroke() and org.omegat.externalfinder.item.ExternalFinderItem$Builder.getKeyStroke()  At ExternalFinderItem.java:[line 107]`,
-    severity: "L",
+    severity: "ERROR",
     file: "ExternalFinderItem.java",
     line: "107",
     message: `Confusing to have methods org.omegat.externalfinder.item.ExternalFinderItem.getKeystroke() and org.omegat.externalfinder.item.ExternalFinderItem$Builder.getKeyStroke() `,
     code: "B NM_CONFUSING Nm",
   }, {
     input: `2023-09-23T04:41:35.2677654Z M V EI_EXPOSE_REP2 EI2: new org.omegat.core.threads.SearchThread(SearchWindowController, Searcher) may expose internal representation by storing an externally mutable object into SearchThread.window  At SearchThread.java:[line 67]`,
-    severity: "M",
+    severity: "ERROR",
     file: "SearchThread.java",
     line: "67",
     message: `new org.omegat.core.threads.SearchThread(SearchWindowController, Searcher) may expose internal representation by storing an externally mutable object into SearchThread.window `,
