@@ -21,22 +21,19 @@ function assertEqual(a, b) {
 
 const testCases = [
   {
-    input: `[ant:checkstyle] [ERROR] /root/Bound.java:7:2: 'import' has incorrect indentation level 1, expected level should be 0. [Indentation]`,
-    severity: "ERROR",
-    file: "/root/Bound.java",
-    line: "7",
-    column: "2",
-    message: `'import' has incorrect indentation level 1, expected level should be 0.`,
-    code: "Indentation",
+    input: `2023-09-23T04:41:35.2692129Z L B NM_CONFUSING Nm: Confusing to have methods org.omegat.externalfinder.item.ExternalFinderItem.getKeystroke() and org.omegat.externalfinder.item.ExternalFinderItem$Builder.getKeyStroke()  At ExternalFinderItem.java:[line 107]`,
+    severity: "L",
+    file: "ExternalFinderItem.java",
+    line: "107",
+    message: `Confusing to have methods org.omegat.externalfinder.item.ExternalFinderItem.getKeystroke() and org.omegat.externalfinder.item.ExternalFinderItem$Builder.getKeyStroke() `,
+    code: "B NM_CONFUSING Nm",
   }, {
-    input: `[WARN] /root/test.java:2:1: The name of the outer type and the file do not match. [OuterTypeFilename]`,
-    severity: undefined,
-    file: "/root/test.java",
-    line: "2",
-    column: "1",
-    message: `The name of the outer type and the file do not match.`,
-    code: "OuterTypeFilename",
-
+    input: `2023-09-23T04:41:35.2677654Z M V EI_EXPOSE_REP2 EI2: new org.omegat.core.threads.SearchThread(SearchWindowController, Searcher) may expose internal representation by storing an externally mutable object into SearchThread.window  At SearchThread.java:[line 67]`,
+    severity: "M",
+    file: "SearchThread.java",
+    line: "67",
+    message: `new org.omegat.core.threads.SearchThread(SearchWindowController, Searcher) may expose internal representation by storing an externally mutable object into SearchThread.window `,
+    code: "V EI_EXPOSE_REP2 EI2",
   }
 ];
 
@@ -48,9 +45,8 @@ const invertedObject = invertObject(matcher);
 for (const testCase of testCases) {
   const matches = testCase.input.match(regexp);
 
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= 5; i++) {
     const fieldName = invertedObject[i];
-
     assertEqual(testCase[fieldName], matches[i]);
   }
 }

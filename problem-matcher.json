@@ -5,7 +5,7 @@
       "severity": "error",
       "pattern": [
         {
-          "regexp": "^.*(H|M|L)\\s+((:?D|I|P|U|V)\\s+(:?[A-Z_]+)?(:?[A-Z][a-z]+[0-9]?)):\\s+(.*)\\s+At\\s+([A-Za-z0-9_]+\\.java):\\[line (\\d+)\\]$",
+          "regexp": "^.*(H|M|L)\\s+((?:B|D|I|P|U|V)\\s+(?:[A-Z0-9_]+\\s+)?(?:[A-Za-z0-9]+)):\\s+(.*)\\s+At\\s+([A-Za-z0-9_]+\\.java):\\[line (\\d+)\\]$",
           "severity": 1,
           "file": 4,
           "line": 5,
